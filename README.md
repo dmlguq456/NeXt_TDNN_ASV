@@ -14,6 +14,9 @@ If you find our work useful, please refer to
 }
 ```
 
+![structure](figure/NeXt_TDNN_structure.png)
+
+
 ## 0. Getting Start
 
 ### Prerequisites
@@ -39,12 +42,6 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
   - To download VoxCeleb dataset fot train/test, execute the command described in the Data preparation section of the [voxceleb_trainer repository](https://github.com/clovaai/voxceleb_trainer)
   - Download [VoxCeleb1-O](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt), [VoxCeleb1-E](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_all2.txt), and [VoxCeleb1-H](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_hard2.txt)  for test and locate it `data` directory
  
-```bash
-python vad_generator.py --mode test --test_path /home/hhj/speaker_verification/voxceleb1 --test_list ./data/veri_test2.txt --save_path ./data/veri_test
-``` 
-
- 
-
 
 The directory structure of speaker verification looks like this:
 
