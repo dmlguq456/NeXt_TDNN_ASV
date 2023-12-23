@@ -14,7 +14,7 @@ If you find our work useful, please refer to
 }
 ```
 
-![structure](figure/NeXt_TDNN_structure.png)
+![structure](NeXt_TDNN_structure.png)
 
 
 ## 0. Getting Start
