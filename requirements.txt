@@ -1,0 +1,16 @@
+lightning==2.1.2
+pandas
+scikit-learn
+scipy
+tensorboard
+colorama
+torchinfo
+ptflops
+thop
+librosa
+timm
+pytorch
+torchvision
+torchaudio
+pytorch-cuda=11.8
+
