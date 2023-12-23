@@ -1,4 +1,4 @@
-# sv_framework
+# NeXt-TDNN for Speaker Verification
 
 
 ## 0. Getting Start
