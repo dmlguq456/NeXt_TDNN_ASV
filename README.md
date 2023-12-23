@@ -84,6 +84,12 @@ python main.py --mode test_all --config configs/NeXt_TDNN_light_C256_B3_K65
 
 
 ## 3. Reference
+- https://github.com/facebookresearch/ConvNeXt-V2
+- https://github.com/clovaai/voxceleb_trainer
+- https://github.com/mechanicalsea/sugar
+- https://github.com/TaoRuijie/ECAPA-TDNN
+- https://github.com/speechbrain/speechbrain
+- https://github.com/zyzisyz/mfa_conformer
 
 
 
