@@ -1,6 +1,6 @@
 # NeXt-TDNN for Speaker Verification
 
-This repository is the official implementation of NeXt-TDNN: Modernizing Multi-Scale Temporal Convolution Backbone for Speaker Verification accepted in ICASSP 2024 [Paper Link](https://arxiv.org/abs/2312.08603)
+This repository is the official implementation of "NeXt-TDNN: Modernizing Multi-Scale Temporal Convolution Backbone for Speaker Verification" accepted in ICASSP 2024 [Paper Link](https://arxiv.org/abs/2312.08603)
 
 If you find our work useful, please refer to 
 ```
@@ -14,8 +14,7 @@ If you find our work useful, please refer to
 }
 ```
 
-![structure](NeXt_TDNN_structure.png)
-
+<p align="center"><img src="NeXt_TDNN_structure.png" width="550" /></p>
 
 ## 0. Getting Start
 
@@ -56,13 +55,12 @@ The directory structure of speaker verification looks like this:
 ├── optimizer             <- optimizer
 ├── preprocessing         <- raw waveform → audio features 
 ├── scheduler             <- learning rate scheduler
-├── SpeakerNet.py                    <- preprocessing + models + aggregation + loss
-├── engine.py                        <- Define train/test loop
-├── eval_metric.py                   <- compute EER
-├── main.py                          <- run train/test
-└── util.py                           <- This includes utility functions such as measuring RTF and MACs
+├── SpeakerNet.py         <- preprocessing + models + aggregation + loss
+├── engine.py             <- Define train/test loop
+├── eval_metric.py        <- compute EER
+├── main.py               <- run train/test
+└── util.py               <- This includes utility functions such as measuring RTF and MACs
 ```
-
 
 
 
@@ -83,6 +81,7 @@ python main.py --mode train --config configs/NeXt_TDNN_C256_B3_K65
 ## 2. Model Test
 To test on VoxCeleb1, run the script below. As in training, select the desired test configuration.
 
+<p align="center"><img src="table_results.png"/></p>
 
 ```bash
 # VoxCeleb1-O
