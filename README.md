@@ -1,5 +1,6 @@
 # NeXt-TDNN for Speaker Verification
 
+This repository is the official implementation of NeXt-TDNN: Modernizing Multi-Scale Temporal Convolution Backbone for Speaker Verification [Paper Link](https://arxiv.org/abs/2312.08603)
 
 ## 0. Getting Start
 
