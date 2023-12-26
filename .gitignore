@@ -52,7 +52,6 @@ exp_compet_aam/*
 configs_compet_msc_tune/*
 exp_compet_msc_tune/*
 experiments/*_test/*
-models/*
 experiments/*
 z_model_ckpt.ipynb
 ignore_folder/*
