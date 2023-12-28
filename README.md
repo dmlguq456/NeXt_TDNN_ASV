@@ -32,38 +32,13 @@ conda install -c "nvidia/label/cuda-11.8.0" cuda
 # PyTorch
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
-
-
-
-
 ### Data preparation
 - [VoxCeleb Dataset](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/index.html#about)
   - To download VoxCeleb dataset fot train/test, execute the command described in the Data preparation section of the [voxceleb_trainer repository](https://github.com/clovaai/voxceleb_trainer)
   - Download [VoxCeleb1-O](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt), [VoxCeleb1-E](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_all2.txt), and [VoxCeleb1-H](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_hard2.txt)  for test and locate it `data` directory
  
 
-The directory structure of speaker verification looks like this:
-
 ```
-├── aggregation           <- raw waveform → audio features
-├── backend               <- compute cosine similarity, euclidean distance
-├── configs               <- configuration files for train
-├── data                  <- Project data
-├── experiments           <- experiment backup.
-├── loss                  <- speaker embedding → logit → Loss
-├── models                <- audio features → Frame-level feature
-├── optimizer             <- optimizer
-├── preprocessing         <- raw waveform → audio features 
-├── scheduler             <- learning rate scheduler
-├── SpeakerNet.py         <- preprocessing + models + aggregation + loss
-├── engine.py             <- Define train/test loop
-├── eval_metric.py        <- compute EER
-├── main.py               <- run train/test
-└── util.py               <- This includes utility functions such as measuring RTF and MACs
-```
-
-
-
 ## 1. Model Training
 To train ASV model, run main script in train mode. You can select the desired training configuration through config argument.
 
