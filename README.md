@@ -4,6 +4,10 @@ This repository is the official implementation of "NeXt-TDNN: Modernizing Multi-
 
 <p align="center"><img src="NeXt_TDNN_structure.png" width="550" /></p>
 
+## News
+🔥 December, 2023: We have uploaded the pre-trained models of our NeXt-TDNN in the `experiments` folder!
+
+
 ## 0. Getting Start
 
 ### Prerequisites
