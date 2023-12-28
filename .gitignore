@@ -43,7 +43,6 @@ exp_inference/*
 configs_vad_short/*
 configs_model/*
 data/train_list_vad*
-*.csv
 *.wav
 *.xlsx
 *.ckpt
