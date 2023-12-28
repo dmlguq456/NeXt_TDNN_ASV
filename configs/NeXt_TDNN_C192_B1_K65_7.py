@@ -117,16 +117,18 @@ TRAINER_CONFIG = {
     'devices': 1,
     'num_sanity_val_steps': -1
 }
+
 # ?? 6. Resume training
 RESUME_CHECKPOINT = None
+PRETRAINED_CHECKPOINT = None
+RESTORE_LOSS_FUNCTION = True
 
 # ======================== Test & onnx ======================== #
 
 # 😀😀 for test 
-TEST_CHECKPOINT = './experiments/T2_06_TS_ConvNeXt_TDNN_C192_B1_K65/lightning_logs/version_0/checkpoints/s-epoch=195-loss=3.44-full_minimum=1.49-min_eer_seg=2.36.ckpt'
+TEST_CHECKPOINT = './experiments/NeXt_TDNN_C192_B1_K65_7/NeXt_TDNN_C192_B1_K65_7.pt'
 
 TEST_RESULT_PATH = f"{TRAINER_CONFIG.get('default_root_dir')}_test"
-ONNX_PATH = f"{TEST_RESULT_PATH}/onnx/model.onnx"
 # ======================== for score normalization ======================== #
 # 😀😀 for score normalization
 TOP_K = 300 # 100, 200, 300, 400, 500

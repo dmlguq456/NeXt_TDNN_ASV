@@ -131,7 +131,7 @@ RESTORE_LOSS_FUNCTION = True
 TEST_CHECKPOINT = './experiments/NeXt_TDNN_light_C128_B3_K65/NeXt_TDNN_light_C128_B3_K65.pt'
 
 TEST_RESULT_PATH = f"{TRAINER_CONFIG.get('default_root_dir')}_test"
-ONNX_PATH = f"{TEST_RESULT_PATH}/onnx/model.onnx"
+
 # ======================== for score normalization ======================== #
 # 😀😀 for score normalization
 TOP_K = 300 # 100, 200, 300, 400, 500
