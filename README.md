@@ -34,7 +34,7 @@ To train ASV model, run main script in train mode. You can select the desired tr
 
 - to train NeXt-TDNN(C=256, B=3)
 ```bash
-python main.py --mode train --config configs/NeXt_TDNN_C256_B3_K65
+python main.py --mode train --config configs/NeXt_TDNN_C256_B3_K65_7
 ```
 
 
@@ -46,10 +46,10 @@ To test on VoxCeleb1, run the script below. As in training, select the desired t
 
 ```bash
 # VoxCeleb1-O
-python main.py --mode test --config configs/NeXt_TDNN_C256_B3_K65
+python main.py --mode test --config configs/NeXt_TDNN_C256_B3_K65_7
 
 # ⚡ VoxCeleb1-O, VoxCeleb1-E, VoxCeleb1-H
-python main.py --mode test_all --config configs/NeXt_TDNN_C256_B3_K65
+python main.py --mode test_all --config configs/NeXt_TDNN_C256_B3_K65_7
 ```
 
 
