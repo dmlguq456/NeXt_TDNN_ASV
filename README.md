@@ -42,7 +42,7 @@ python main.py --mode train --config configs/NeXt_TDNN_C256_B3_K65_7
 ## 2. Model Test
 To test on VoxCeleb1, run the script below. As in training, select the desired test configuration.
 
-<p align="center"><img src="table_results.png"/></p>
+<p align="center"><img src="table_result.png"/></p>
 
 ```bash
 # VoxCeleb1-O
