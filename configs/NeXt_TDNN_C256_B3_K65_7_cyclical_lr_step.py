@@ -1,3 +1,4 @@
+# Original files: T1_08_TS_ConvNeXt_TDNN_S2_C256_B3_K65_7
 
 BATCHSIZE= 128
 BASE_LR = 1e-6
