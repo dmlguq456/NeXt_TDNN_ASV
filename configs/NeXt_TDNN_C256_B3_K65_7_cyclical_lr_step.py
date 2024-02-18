@@ -1,5 +1,3 @@
-# Original files: T1_08_TS_ConvNeXt_TDNN_S2_C256_B3_K65_7
-
 BATCHSIZE= 128
 BASE_LR = 1e-6
 LR = BASE_LR * BATCHSIZE
@@ -131,7 +129,6 @@ RESTORE_LOSS_FUNCTION = True
 # ======================== Test & onnx ======================== #
 
 # 😀😀 for test 
-# TEST_CHECKPOINT = './exp_paper/T1_08_TS_ConvNeXt_TDNN_S2_C256_B3_K65_7_cyclical_lr_ecapa/lightning_logs/version_0/checkpoints/s-epoch=115-loss=1.42-full_minimum=0.83-min_eer_seg=1.08.ckpt'
 # TEST_CHECKPOINT = './experiments/NeXt_TDNN_C256_B3_K65_7_cyclical_lr_step/lightning_logs/version_0/checkpoints/s-epoch=115-loss=1.42-full_minimum=0.83-min_eer_seg=1.08.ckpt'
 TEST_CHECKPOINT = './experiments/NeXt_TDNN_C256_B3_K65_7_cyclical_lr_step/model.pt'
 
