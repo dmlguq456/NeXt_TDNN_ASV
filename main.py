@@ -13,7 +13,7 @@ from lightning.pytorch import seed_everything
 
 from SpeakerNet import SpeakerNet, SpeakerNetMultipleLoss
 
-from engine import ENGINE
+from engine import ENGINE, ENGINESTEP
 
 from util import *
 
@@ -84,7 +84,12 @@ def train(config, code_save_time):
 
     scheduler = importlib.import_module("scheduler." + config.SCHEDULER).__getattribute__("Scheduler")
     scheduler = scheduler(optimizer, **config.SCHEDULER_CONFIG)
-    lr_monitor = LearningRateMonitor(logging_interval='epoch')
+    if config.SCHEDULER == "steplr":
+        lr_monitor = LearningRateMonitor(logging_interval='epoch')
+    elif config.SCHEDULER == "cyclical_lr":
+        lr_monitor = LearningRateMonitor(logging_interval='step')
+    else:
+        raise ValueError("Scheduler is not supported. Please check 'scheduler' in config.py")
 
     # Load pre-trained weights from checkpoint
     if config.PRETRAINED_CHECKPOINT is not None:
@@ -112,13 +117,21 @@ def train(config, code_save_time):
     # ==============================================================
     # ⚡⚡  3. Set 'engine' for training/validation and 'Trainer'
     # ==============================================================    
-    engine = ENGINE(speaker_net = speaker_net,
-                    loss_function = speaker_net.loss_function,
-                    optimizer = optimizer, 
-                    scheduler = scheduler,
-                    code_save_time=code_save_time,
-                    **config.ENGINE_CONFIG)
-    
+    if config.SCHEDULER == "steplr":
+        engine = ENGINE(speaker_net = speaker_net,
+                        loss_function = speaker_net.loss_function,
+                        optimizer = optimizer, 
+                        scheduler = scheduler,
+                        code_save_time=code_save_time,
+                        **config.ENGINE_CONFIG)
+    elif config.SCHEDULER == "cyclical_lr":
+        engine = ENGINESTEP(speaker_net = speaker_net,
+                        loss_function = speaker_net.loss_function,
+                        optimizer = optimizer, 
+                        scheduler = scheduler,
+                        code_save_time=code_save_time,
+                        **config.ENGINE_CONFIG)
+        
     #  Init ModelCheckpoint callback, monitoring "eer"    
     checkpoint_callback = ModelCheckpoint(**config.CHECKPOINT_CONFIG)
 

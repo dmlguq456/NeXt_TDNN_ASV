@@ -310,3 +310,22 @@ class ENGINE(L.LightningModule):
             },
         }
     
+
+class ENGINESTEP(ENGINE):
+    """
+    Only difference is that the learning rate is updated every step.
+    """
+    def __init__(self, speaker_net, loss_function, optimizer, scheduler, eval_config, code_save_time, config = None, **kwargs):
+        super().__init__(speaker_net, loss_function, optimizer, scheduler, eval_config, code_save_time, config, **kwargs)
+
+    def configure_optimizers(self):
+        return {
+            "optimizer": self.optimizer,
+            "lr_scheduler": {
+                "scheduler": self.scheduler,
+                "monitor": "loss",
+                "interval": 'step',
+                "frequency": 1,
+                "name": 'lr_log'
+            },
+        }
