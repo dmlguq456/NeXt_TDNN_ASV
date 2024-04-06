@@ -7,7 +7,7 @@ This repository is the official implementation of "NeXt-TDNN: Modernizing Multi-
 ## News
 🔥 December, 2023: We have uploaded the pre-trained models of our NeXt-TDNN in the `experiments` folder!
 
-🍀 February 2024, the NeXt-TDNN model was updated with cyclic learning rate scheduling. This update improved the EER from 0.79% to 0.72%. Changes were made to the LR scheduling, gradient clipping value, and batch size. Please check `configs/NeXt_TDNN_C256_B3_K65_7_cyclical_lr_step.py` for details.
+🔥 February 2024, the NeXt-TDNN model was updated with cyclic learning rate scheduling. This update improved the EER from 0.79/1.04/1.82% to 0.72/0.94/1.68% in VoxCeleb1-O/E/H. Changes were made to the LR scheduling, gradient clipping value, and batch size. Please check `configs/NeXt_TDNN_C256_B3_K65_7_cyclical_lr_step.py` for details.
 
 
 ## 0. Getting Start
