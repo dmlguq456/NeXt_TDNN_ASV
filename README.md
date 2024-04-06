@@ -68,12 +68,14 @@ python main.py --mode test_all --config configs/NeXt_TDNN_C256_B3_K65_7
 
 If you find our work useful, please refer to 
 ```
-@misc{heo2023nexttdnn,
-      title={NeXt-TDNN: Modernizing Multi-Scale Temporal Convolution Backbone for Speaker Verification}, 
-      author={Hyun-Jun Heo and Ui-Hyeop Shin and Ran Lee and YoungJu Cheon and Hyung-Min Park},
-      year={2023},
-      eprint={2312.08603},
-      archivePrefix={arXiv},
-      primaryClass={eess.AS}
-}
+@INPROCEEDINGS{10447037,
+  author={Heo, Hyun-Jun and Shin, Ui-Hyeop and Lee, Ran and Cheon, YoungJu and Park, Hyung-Min},
+  booktitle={ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={NeXt-TDNN: Modernizing Multi-Scale Temporal Convolution Backbone for Speaker Verification}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={11186-11190},
+  keywords={Convolution;Speech recognition;Transformers;Acoustics;Task analysis;Speech processing;speaker recognition;speaker verification;TDNN;ConvNeXt;multi-scale},
+  doi={10.1109/ICASSP48485.2024.10447037}}
 ```
