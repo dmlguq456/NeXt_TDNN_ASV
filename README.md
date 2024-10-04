@@ -1,4 +1,4 @@
-# NeXt-TDNN for Speaker Verification
+# NeXt-TDNN for Speaker Verification [ICASSP 2024]
 
 This repository is the official implementation of "NeXt-TDNN: Modernizing Multi-Scale Temporal Convolution Backbone for Speaker Verification" accepted in ICASSP 2024 [Paper Link (Arxiv)](https://arxiv.org/abs/2312.08603) / [Paper Link (IEEE)](https://ieeexplore.ieee.org/abstract/document/10447037)
 
